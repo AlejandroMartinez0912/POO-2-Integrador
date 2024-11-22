@@ -1,4 +1,4 @@
-package com.unam.greenwave.controllers;
+package com.unam.greenwave.controllers; 
 
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.GetMapping;
