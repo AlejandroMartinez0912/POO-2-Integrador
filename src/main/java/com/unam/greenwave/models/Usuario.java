@@ -1,28 +1,28 @@
 package com.unam.greenwave.models;
 
-import java.util.List;
+import com.unam.greenwave.enums.RolEnum;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+
 @Getter @Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+
 @Entity
-public class Cliente extends Usuario {
+public class Usuario {
+    @Id
     private long id;
-    private String province;
-    private String city;
-    private String postalCode;
-    private String address;
-    private String numberPhone;
-  
-    private List<Pedido> pedidos;
-    
-    
+    private String name;
+    private String lastname;
+    private String email;
+    private String password;
+    private RolEnum rol;
 }
