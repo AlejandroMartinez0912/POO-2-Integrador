@@ -2,7 +2,7 @@ package com.unam.greenwave.models;
 /**
  * Clase que representa a un vendedor.
  */
-public class Vendedor {
+public class Vendedor extends Usuario{
 
     //Atributos
     private int id;
@@ -42,7 +42,7 @@ public class Vendedor {
     }   
 
     //Metodos Getters y Setters
-    public int getId() {
+    public long getId() {
         return id;
     }
 
