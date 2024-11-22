@@ -8,5 +8,6 @@ public class Producto {
 
     private Categoria category;
 
+    //Crear estos metodos remove y contains para la lista de productos de la clase vendedor
 
 }
