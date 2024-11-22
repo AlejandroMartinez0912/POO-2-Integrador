@@ -61,7 +61,7 @@
     height: 40px;
     padding: 10px;
     border: 2px solid #387F39; /* Color de borde */
-    border-radius: 20px 0 0 20px; /* Bordes redondeados en la izquierda */
+    border-radius: 15px 0 0 15px; /* Bordes redondeados en la izquierda */
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease;
@@ -79,7 +79,7 @@
     width: 80px;
     background-color: #449945; /* Color de fondo */
     border: none;
-    border-radius: 0 20px 20px 0; /* Bordes redondeados en la derecha */
+    border-radius: 0 15px 15px 0; /* Bordes redondeados en la derecha */
     cursor: pointer;
     font-size: 20px;
     color: white; /* Color del ícono */
@@ -91,4 +91,7 @@
     background-color: #6AA84F; /* Cambia el color al pasar el mouse */
 }
 
-
+.body{
+    margin: 1cm 8cm 1cm 8cm;
+    background-color: #F6E96B;
+}
