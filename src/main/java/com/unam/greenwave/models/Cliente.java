@@ -12,6 +12,7 @@ import lombok.ToString;
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class Cliente {
     private long id;
     private String name;
@@ -22,11 +23,8 @@ public class Cliente {
     private String postalCode;
     private String address;
     private String numberPhone;
-
-    
+  
     private List<Pedido> pedidos;
     
-    
-
     
 }
