@@ -9,7 +9,7 @@ import com.unam.greenwave.services.HomeService;
 
 
 @RestController
-@RequestMapping("/home") //ver como quieren que se maneje el path
+@RequestMapping("/") //ver como quieren que se maneje el path
 public class HomeController {
     private final HomeService homeService;
 

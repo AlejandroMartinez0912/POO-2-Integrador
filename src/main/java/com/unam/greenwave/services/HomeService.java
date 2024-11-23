@@ -6,10 +6,6 @@ import org.springframework.web.bind.annotation.RestController;
 @Service
 public class HomeService {
 
-    private final HomeRepository homeRepository;
 
-    public HomeService(HomeRepository homeRepository) {
-        this.homeRepository = homeRepository;
-    }
 
 }
