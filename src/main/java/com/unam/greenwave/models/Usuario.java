@@ -1,8 +1,12 @@
 package com.unam.greenwave.models;
 
-import com.unam.greenwave.enums.RolEnum;
+import com.unam.greenwave.enums.Rol;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,10 +23,15 @@ import lombok.ToString;
 @Entity
 public class Usuario {
     @Id
-    private long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+    
     private String name;
     private String lastname;
     private String email;
     private String password;
-    private RolEnum rol;
+
+    @Enumerated(EnumType.STRING)
+    private Rol rol;
 }
+
