@@ -3,9 +3,12 @@ package com.unam.greenwave.services;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import com.unam.greenwave.models.Producto;
 import com.unam.greenwave.repository.ProductoRepository;
 
+@Service
 public class ProductoService {
     private final ProductoRepository repository;
 

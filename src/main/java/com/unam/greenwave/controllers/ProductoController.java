@@ -8,10 +8,14 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.unam.greenwave.models.Producto;
 import com.unam.greenwave.services.ProductoService;
 
+@RestController
+@RequestMapping("/api/products")
 public class ProductoController {
     private final ProductoService service;
 
