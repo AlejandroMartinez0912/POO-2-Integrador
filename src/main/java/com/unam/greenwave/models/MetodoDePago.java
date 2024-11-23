@@ -1,30 +1,26 @@
 package com.unam.greenwave.models;
 
-import java.util.List;
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-@Setter @Getter 
-@ToString 
-@NoArgsConstructor 
-@AllArgsConstructor
+@Getter @Setter
+@NoArgsConstructor @AllArgsConstructor
+@ToString
 @Entity
-public class MetodoEnvio {
+public class MetodoDePago {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String nombre;
+    private String descripcion;
+    private String estado; // activo, inactivo
 
 
-    @OneToMany(mappedBy = "shippingMethod")
-    private List<Pedido> orders;
 }
