@@ -1,97 +1,160 @@
-.main-header{
+/* Estilo para el header */
+.main-header {
     background-color: #A2CA71;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
-    height: 100px;
+    padding: 20px 50px;  /* Más espacio para mayor separación */
+    height: 120px;  /* Un poco más de altura para que el logo se vea más espacioso */
 }
 
-.header-container{
+/* Contenedor principal del header */
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    margin: 5cm;
 }
 
-.header-logo{
-    height: 100px;
-    width: 250px;
-}
-
-.header-logo img{
-    height: 100px;
+/* Logo */
+.header-logo img {
+    height: 80px;  /* Reducido un poco para que no ocupe tanto espacio */
     width: auto;
 }
 
-.header-cuenta{
-    float: right;
-}
-
-.header-cuenta a{
+/* Links de cuenta */
+.header-cuenta a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 0 10px;
+    padding: 0 20px;  /* Aumentado espacio entre los enlaces */
+    transition: color 0.3s ease;  /* Transición suave para el hover */
 }
 
-.header-cuenta a:hover{
-    color: #3c763d;
+/* Hover de los enlaces */
+.header-cuenta a:hover {
+    color: #6AA84F;
 }
 
-.header-search{
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-
-}
-
-/* Contenedor general */
+/* Contenedor de búsqueda */
 .search-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px 0;
 }
 
-/* Estilo del input */
+/* Input de búsqueda */
 .search-input {
     width: 300px;
     height: 40px;
     padding: 10px;
-    border: 2px solid #387F39; /* Color de borde */
-    border-radius: 15px 0 0 15px; /* Bordes redondeados en la izquierda */
+    border: 2px solid #387F39;
+    border-radius: 15px 0 0 15px;
     font-size: 16px;
     outline: none;
     transition: all 0.3s ease;
 }
 
-/* Efecto al hacer foco */
 .search-input:focus {
-    border-color: #6AA84F; /* Cambia el color del borde al enfocar */
+    border-color: #6AA84F;
     box-shadow: 0 0 5px rgba(106, 168, 79, 0.5);
 }
 
-/* Estilo del botón */
+/* Botón de búsqueda */
 .search-button {
     height: 40px;
     width: 80px;
-    background-color: #449945; /* Color de fondo */
+    background-color: #449945;
     border: none;
-    border-radius: 0 15px 15px 0; /* Bordes redondeados en la derecha */
+    border-radius: 0 15px 15px 0;
     cursor: pointer;
-    font-size: 20px;
-    color: white; /* Color del ícono */
-    transition: all 0.3s ease;
+    font-size: 18px;
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
-/* Hover en el botón */
 .search-button:hover {
-    background-color: #6AA84F; /* Cambia el color al pasar el mouse */
+    background-color: #6AA84F;
 }
 
-.body{
-    margin: 1cm 8cm 1cm 8cm;
-    background-color: #F6E96B;
+/* Estilo general de las cards */
+.card {
+    width: 18rem;  /* Reducimos el tamaño para que se acomoden mejor */
+    margin: 1.5cm;  /* Espaciado entre las cards */
+    border-radius: 10px;  /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /* Sombra suave para darle profundidad */
+    overflow: hidden;  /* Para que no sobresalga nada fuera de la tarjeta */
+    transition: transform 0.3s ease;  /* Efecto de transformación al pasar el mouse */
 }
+
+.card:hover {
+    transform: translateY(-5px);  /* Efecto de elevación cuando pasa el mouse */
+}
+
+/* Imagen de la tarjeta */
+.card-img-top {
+    height: 200px;  /* Un tamaño fijo para las imágenes */
+    object-fit: cover;  /* Para que se ajuste bien dentro del espacio */
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    background-color: #f9f9f9;  /* Fondo suave para la parte interna */
+    padding: 15px;
+}
+
+/* Título de la tarjeta */
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #387F39;  /* Color verde */
+    margin-bottom: 10px;
+}
+
+/* Texto de la tarjeta */
+.card-text {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Botón de la tarjeta */
+.btn-primary {
+    background-color: #449945;
+    border-color: #449945;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #6AA84F;
+}
+
+footer {
+    background-color: #3c763d;
+    color: black;  /* Texto blanco */
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #6AA84F;
+}
+
+body {
+    background: linear-gradient(to bottom, #a8de94, #f4f9e6);
+}
+

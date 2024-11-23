@@ -4,8 +4,11 @@ import com.unam.greenwave.dto.UsuarioDTO;
 import com.unam.greenwave.models.Usuario;
 
 public interface UsuarioRepository {
-    Usuario findByUsername(String username);
+    Usuario buscarPorNombre(String name);
+    Usuario buscarPorNombreYApellido(String name, String lastname);
+    Usuario buscarPorApellido(String lastname);
+    Usuario buscarPorEmail(String email);
 
-    Usuario save(UsuarioDTO userDto);
+    Usuario guardar(UsuarioDTO userDto);
 
 }

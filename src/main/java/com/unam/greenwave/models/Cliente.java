@@ -2,7 +2,13 @@ package com.unam.greenwave.models;
 
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -15,14 +21,17 @@ import lombok.ToString;
 @AllArgsConstructor
 @Entity
 public class Cliente extends Usuario {
-    private long id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String province;
     private String city;
     private String postalCode;
     private String address;
     private String numberPhone;
   
-    private List<Pedido> pedidos;
+    @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Pedido> historialPedidos;
     
     
 }
