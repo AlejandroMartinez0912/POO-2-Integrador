@@ -1,18 +1,18 @@
 package com.unam.greenwave.models;
 
-import com.unam.greenwave.enums.Rol;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.Inheritance;
-import jakarta.persistence.InheritanceType;
-import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -20,30 +20,23 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
 @Getter @Setter
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-public class Usuario {
+public class Direccion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     
-    private String name;
-    private String lastname;
-    private String email;
-    private String password;
-    private String phone;
+    private String street;
+    private String number;
+    private String city;
+    private String postalCode;
+    private String province;
 
-    @OneToOne
-    @JoinColumn(name = "address_id")
-    private Direccion address;
+    @OneToOne(mappedBy = "address", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Usuario user;
 
-    @Enumerated(EnumType.STRING)
-    private Rol rol;
 }
-

@@ -37,6 +37,7 @@ public class Producto {
     @Enumerated(EnumType.STRING)
     private Categoria category;
 
-    //Crear estos metodos remove y contains para la lista de productos de la clase vendedor
+    @ManyToOne
+    private Vendedor seller;
 
 }
