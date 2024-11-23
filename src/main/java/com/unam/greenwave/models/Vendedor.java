@@ -1,4 +1,6 @@
 package com.unam.greenwave.models;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * Clase que representa a un vendedor.
  */
@@ -14,6 +16,8 @@ public class Vendedor extends Usuario{
     private String postalCode;
     private String address;
     private String numberPhone;
+    private List<Producto> productos = new ArraylIST(); // Lista de productos del vendedor.
+
 
    /**
      * Constructor para inicializar los atributos del vendedor.
@@ -113,19 +117,52 @@ public class Vendedor extends Usuario{
     public void setNumberPhone(String numberPhone) {
         this.numberPhone = numberPhone;
     }
-     // Métodos adicionales
-
-    /**
-     * Registra una nueva venta realizada por el vendedor.
-     * 
-     * @param venta Objeto de tipo Venta.
+     // Métodos 
+         /**
+     * Registra un nuevo producto en la lista del vendedor.
+     *
+     * @param producto Producto a registrar.
+     * @return true si el producto fue registrado con éxito, false si ya existe.
      */
-
-     ///
-     /// 
-     /// 
-     /// 
-    
+    public boolean registrarProducto(Producto producto){
+        if (producto != null && !producto.contains(producto)){
+            productos.add(producto);
+            return true;
+        }
+        return false;
+    }
+        /**
+     * Elimina un producto de la lista del vendedor.
+     *
+     * @param producto Producto a eliminar.
+     * @return true si el producto fue eliminado, false si no se encontró.
+     */
+    public boolean eliminarProdcuto(Producto producto){
+        return producto.remove(producto);
+    }
+     /**
+     * Edita los datos de un producto existente.
+     *
+     * @param producto Producto existente a modificar.
+     * @param nuevoProducto Producto con los nuevos datos.
+     * @return true si el producto fue editado con éxito, false si no se encontró.
+     */
+    public boolean editarProducto(Producto producto, Producto nuevoProducto){
+        int index = productos.indexOf(producto);
+        if (index != -1){
+            productos.set(index, nuevoProducto);
+            return true;
+        }
+        return false;
+    }
+     /**
+     * Obtiene la lista de productos registrados por el vendedor.
+     *
+     * @return Lista de productos.
+     */
+    public List<Producto> listarProductos(){
+        return new ArrayList<>(productos);
+    }
     /**
      * Representación en cadena del objeto Vendedor.
      * 
