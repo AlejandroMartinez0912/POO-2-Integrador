@@ -16,7 +16,7 @@ public class Vendedor extends Usuario{
     private String postalCode;
     private String address;
     private String numberPhone;
-    private List<Producto> productos = new ArraylIST(); // Lista de productos del vendedor.
+    private List<Producto> productos = new ArrayList<>(); // Lista de productos del vendedor.
 
 
    /**
@@ -46,8 +46,8 @@ public class Vendedor extends Usuario{
     }   
 
     //Metodos Getters y Setters
-    public long getId() {
-        return id;
+    public Long getId() {
+        return (long) this.id; // Asegúrate de que `id` sea de tipo `Long`
     }
 
     public void setId(int id) {
@@ -124,22 +124,22 @@ public class Vendedor extends Usuario{
      * @param producto Producto a registrar.
      * @return true si el producto fue registrado con éxito, false si ya existe.
      */
-    public boolean registrarProducto(Producto producto){
+    /*public boolean registrarProducto(Producto producto){
         if (producto != null && !producto.contains(producto)){
             productos.add(producto);
             return true;
         }
         return false;
-    }
+    } */
         /**
      * Elimina un producto de la lista del vendedor.
      *
      * @param producto Producto a eliminar.
      * @return true si el producto fue eliminado, false si no se encontró.
      */
-    public boolean eliminarProdcuto(Producto producto){
-        return producto.remove(producto);
-    }
+    /*public boolean eliminarProdcuto(Producto producto){
+        //return producto.remove(producto);
+    } */
      /**
      * Edita los datos de un producto existente.
      *

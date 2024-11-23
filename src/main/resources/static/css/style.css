@@ -1,3 +1,4 @@
+
 /* Estilo para el header */
 .main-header {
     background-color: #A2CA71;
@@ -155,6 +156,6 @@ footer a:hover {
 }
 
 body {
-    background: linear-gradient(to bottom, #a8de94, #f4f9e6);
+    background: linear-gradient(135deg, #A2CA71, #056a5b);
 }
 
