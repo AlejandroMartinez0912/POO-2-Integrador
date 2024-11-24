@@ -1,13 +1,16 @@
 package com.unam.greenwave.services;
 
-import com.unam.greenwave.dto.UsuarioDTO;
-import com.unam.greenwave.models.Usuario;
+import org.springframework.stereotype.Service;
 
-public interface UsuarioService {
-    Usuario buscarPorNombre(String name);
-    Usuario buscarPorNombreYApellido(String name, String lastname);
-    Usuario buscarPorApellido(String lastname);
-    Usuario buscarPorEmail(String email);
-    
-    Usuario guardar(UsuarioDTO userDTO);
+import com.unam.greenwave.models.Usuario;
+import com.unam.greenwave.repository.UsuarioRepository;
+
+@Service
+public class UsuarioService {
+
+    private final UsuarioRepository usuarioRepository;
+
+    public UsuarioService(UsuarioRepository usuarioRepository) {
+        this.usuarioRepository = usuarioRepository;
+    }
 }

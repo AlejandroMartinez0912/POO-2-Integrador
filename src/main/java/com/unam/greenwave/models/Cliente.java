@@ -24,11 +24,7 @@ public class Cliente extends Usuario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String province;
-    private String city;
-    private String postalCode;
-    private String address;
-    private String numberPhone;
+  
   
     @OneToMany(mappedBy = "client", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Pedido> historialPedidos;

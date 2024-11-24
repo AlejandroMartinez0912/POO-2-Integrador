@@ -1,11 +1,18 @@
 package com.unam.greenwave.models;
 
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,19 +21,22 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Getter @Setter
-@NoArgsConstructor @AllArgsConstructor
 @ToString
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
-public class MetodoDePago {
+public class Direccion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nombre;
-    private String descripcion;
-    private String estado; // activo, inactivo
+    
+    private String street;
+    private String number;
+    private String city;
+    private String postalCode;
+    private String province;
 
-    @OneToOne(mappedBy = "paymentMethod", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private Pedido order;
-
+    @OneToOne(mappedBy = "address", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private Usuario user;
 
 }

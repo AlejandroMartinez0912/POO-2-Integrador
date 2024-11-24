@@ -1,14 +1,11 @@
 package com.unam.greenwave.repository;
 
-import com.unam.greenwave.dto.UsuarioDTO;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 import com.unam.greenwave.models.Usuario;
 
-public interface UsuarioRepository {
-    Usuario buscarPorNombre(String name);
-    Usuario buscarPorNombreYApellido(String name, String lastname);
-    Usuario buscarPorApellido(String lastname);
-    Usuario buscarPorEmail(String email);
-
-    Usuario guardar(UsuarioDTO userDto);
+@Repository
+public interface UsuarioRepository extends JpaRepository<Usuario, Long> {
 
 }
