@@ -8,8 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.unam.greenwave.services.HomeService;
 
 
-@RestController
-@RequestMapping("/") //ver como quieren que se maneje el path
+@Controller
 public class HomeController {
     private final HomeService homeService;
 
@@ -18,7 +17,7 @@ public class HomeController {
     }
 
 
-    @GetMapping()
+    @GetMapping("/home")
     public String home() {
         return "home";
     }
