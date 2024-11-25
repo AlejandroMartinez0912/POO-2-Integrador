@@ -105,19 +105,38 @@
             bottom: 0;
             width: 100%;
         }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px; /* Espacio entre el logo y el texto */
+            }
 
+            .header-container img {
+            height: 3em; /* Ajusta el tamaño del logo al tamaño del texto */
+            }
+
+            .header-container h1 {
+            font-size: 1.5rem; /* Tamaño del texto */
+            margin: 0;
+            color: #333; /* Color del texto */
+            }
 
     </style>
 </head>
 <body>
     <div class="login-container">
-        <h1>Iniciar Sesión</h1>
+        <div class="header-container">
+            <img src="/images/soloLogo.png" alt="GreenWave">
+            <h1>Iniciar Sesión</h1>
+        </div>
         <form action="/login" method="POST">
             <input type="text" name="username" placeholder="Correo electrónico" required>
             <input type="password" name="password" placeholder="Contraseña" required>
             <button type="submit">Ingresar</button>
         </form>
         <a href="/register">¿No tienes cuenta? Regístrate aquí</a>
+        <a href="/vendedor">Crear producto</a>
     </div>
     <footer>
         <div th:replace="~{fragments/footer}"></div>

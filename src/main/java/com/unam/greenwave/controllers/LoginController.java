@@ -9,4 +9,6 @@ public class LoginController {
     public String showLoginPage() {
         return "login/login"; // Apunta a src/main/resources/templates/login/login.html
     }
+
+   
 }
