@@ -1,6 +1,7 @@
 package com.unam.greenwave.models;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -12,7 +13,6 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -32,17 +32,18 @@ public class Pedido {
     private String status;
 
     @ManyToOne
+    @JoinColumn(name = "cliente_id", nullable = false)
     private Cliente client;
 
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name = "payment_method_id")
     private MetodoDePago paymentMethod;
 
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<DetallePedido> orderDetails;
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER)
+    private List<DetallePedido> orderDetails = new ArrayList<>();
 
-    @ManyToOne
-    private MetodoEnvio shippingMethod;
+    /* @ManyToOne
+    private MetodoEnvio shippingMethod; */
 
 
 }

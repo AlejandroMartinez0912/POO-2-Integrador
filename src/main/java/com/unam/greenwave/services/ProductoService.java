@@ -2,11 +2,8 @@ package com.unam.greenwave.services;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.Locale.Category;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.unam.greenwave.enums.Categoria;
 import com.unam.greenwave.enums.TipoProducto;
 import com.unam.greenwave.models.PaqueteProducto;

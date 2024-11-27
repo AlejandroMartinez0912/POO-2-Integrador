@@ -9,6 +9,7 @@ import com.unam.greenwave.services.HomeService;
 
 
 @Controller
+@RequestMapping("/home")
 public class HomeController {
     private final HomeService homeService;
 
@@ -17,9 +18,15 @@ public class HomeController {
     }
 
 
-    @GetMapping("/home")
+    @GetMapping()
     public String home() {
         return "home";
+    }
+
+    //Vista del vendedor/administrador
+    @GetMapping("/vendedor")
+    public String vendedor() {
+        return "vendedor";
     }
     
 
