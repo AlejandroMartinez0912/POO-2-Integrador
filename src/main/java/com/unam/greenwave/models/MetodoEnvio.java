@@ -27,6 +27,6 @@ public class MetodoEnvio {
     private String nombre;
 
 
-    @OneToMany(mappedBy = "shippingMethod", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<Pedido> orders;
+    /* @OneToMany(mappedBy = "shippingMethod", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    private List<Pedido> orders; */
 }

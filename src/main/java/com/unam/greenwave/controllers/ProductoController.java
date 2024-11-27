@@ -17,7 +17,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.unam.greenwave.dto.PaqueteProductoDTO;
 import com.unam.greenwave.dto.ProductoIndividualDTO;
-import com.unam.greenwave.enums.Categoria;
 import com.unam.greenwave.models.MetodoDePago;
 import com.unam.greenwave.models.PaqueteProducto;
 import com.unam.greenwave.models.Producto;
