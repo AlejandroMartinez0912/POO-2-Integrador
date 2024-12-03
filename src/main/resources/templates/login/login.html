@@ -5,142 +5,158 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GreenWave | Login</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- No toma los estilos de css-->
-    <style>
-        /* General Styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-        body {
-            background: linear-gradient(135deg, #A2CA71, #056a5b);
-            
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: #fff;
-        }
-
-        .login-container {
-            background: #ffffff;
-            color: #333;
-            width: 400px;
-            padding: 30px 40px;
-            border-radius: 10px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            margin-left: auto;
-            margin-right: auto;
-            margin-top:15%;
-        }
-
-        .login-container h1 {
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #056a5b;
-        }
-
-        .login-container form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .login-container input[type="text"],
-        .login-container input[type="password"] {
-            width: 100%;
-            padding: 12px 15px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-
-        .login-container button {
-            background: #056a5b;
-            color: #fff;
-            border: none;
-            padding: 12px 15px;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-
-        .login-container button:hover {
-            background: #32b876;
-        }
-
-        .login-container a {
-            margin-top: 15px;
-            color: #056a5b;
-            font-size: 0.9rem;
-            text-decoration: none;
-        }
-
-        .login-container a:hover {
-            text-decoration: underline;
-        }
-        .custom-button {
-            background-color: #6AA84F;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s ease;
-        }
-
-        .custom-button:hover {
-            background-color: #5b9444; /* Color más oscuro para efecto hover */
-        }
-        footer {
-            text-align: center;
-            padding: 10px 0;
-            font-size: 0.9rem;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .header-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px; /* Espacio entre el logo y el texto */
-            }
-
-            .header-container img {
-            height: 3em; /* Ajusta el tamaño del logo al tamaño del texto */
-            }
-
-            .header-container h1 {
-            font-size: 1.5rem; /* Tamaño del texto */
-            margin: 0;
-            color: #333; /* Color del texto */
-            }
-
-    </style>
 </head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    border: 2px solid red;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #A2CA71, #056a5b);
+
+}
+
+.container{
+    border: 2px solid black;
+    width: 800px;
+    height: 650px;
+    display: flex;
+    background-color: white;
+}
+.container-form{
+    border: 2px;
+    width: 100%;
+} 
+.container-form form{
+    border: 2px solid black;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-form h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.container-form h4{
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+.container-form span{
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.container-input{
+    border: 2px;
+    width: 300px;
+    height: 40px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 0 15px;
+    background-color: #EEEEEE;
+}
+.container-input input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    background-color: inherit;
+}
+.container-form a{
+    color: black;
+    font-size: 14px;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+.button{
+    width: 170px;
+    height: 45px;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: #056a5b;
+    color:white;
+}
+
+</style>
 <body>
-    <div class="login-container">
-        <div class="header-container">
-            <img src="/images/soloLogo.png" alt="GreenWave">
-            <h1>Iniciar Sesión</h1>
+
+    <div class=" container">
+        <div class="container-form">
+            <form class="sign-in">
+                
+                <h2>Iniciar Sesión</h2>
+                <span>Utilice su correo y contraseña</span>
+                <div class="container-input">
+                    <i class='bx bx-envelope'></i>
+                    <input type="email" placeholder="Correo Electronico">
+                </div>
+                <div class="container-input">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <button class="button">INICIAR SESIÓN</button>
+            </form>
+            
         </div>
-        <form action="/login" method="POST">
-            <input type="text" name="username" placeholder="Correo electrónico" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
-            <button type="submit">Ingresar</button>
-        </form>
-        <a href="/register">¿No tienes cuenta? Regístrate aquí</a>
-        <a href="/vendedor">Crear producto</a>
+        <div class="container-form">
+            <form class="sign-up">
+                <h2>Registrarse</h2>
+                <span>Complete el formulario con sus datos por favor</span>
+                <h4>Datos Personales</h4>
+                <div class="container-input">
+                    <i class='bx bx-user'></i>
+                    <input type="text" placeholder="Nombre">
+                </div>
+                <div class="container-input">
+                    <i class='bx bx-envelope'></i>
+                    <input type="email" placeholder="Correo Electronico">
+                </div>
+                <div class="container-input">
+                    <i class='bx bx-lock-alt'></i>
+                    <input type="password" placeholder="Contraseña">
+                </div>
+                <h4>Direccion</h4>
+                <div class="container-input">
+                    <input type="text" placeholder="Provincia">
+                </div>
+                <div class="container-input">
+                    <input type="text" placeholder="Ciudad">
+                </div>
+                <div class="container-input">
+                    <input type="text" placeholder="Código Postal">
+                </div>
+                <div class="container-input">
+                    <input type="text" placeholder="Calle">
+                </div>
+                <div class="container-input">
+                    <input type="text" placeholder="Numero">
+                </div>
+               
+                <button class="button">REGISTRARSE</button>
+            </form>
+        </div>
     </div>
-    <footer>
-        <div th:replace="~{fragments/footer}"></div>
-    </footer>
+
 </body>
 
 </html>

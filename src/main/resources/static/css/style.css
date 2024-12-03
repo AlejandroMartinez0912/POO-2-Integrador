@@ -1,4 +1,7 @@
 
+    *{    
+        font-family: "Montserrat", sans-serif;
+    }
 /* Estilo para el header */
 .main-header {
     background-color: #A2CA71;
@@ -158,4 +161,4 @@ footer a:hover {
 body {
     background: linear-gradient(135deg, #A2CA71, #056a5b);
 }
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
